@@ -1,0 +1,15 @@
+.header {
+  &__title {
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+}
+
+mat-sidenav-container {
+  background-color: transparent;
+  min-height: calc(100vh - 3rem);
+}
+
+mat-sidenav {
+  width: 15rem;
+}
