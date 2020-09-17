@@ -6,7 +6,7 @@
 
 <div class="ranges">
   <figure *ngFor="let img of ranges[selectedPosition]">
-    <img [src]="IMG_PATH + selectedPosition + '/' + img" alt="" />
+    <img [src]="IMG_PATH + selectedPosition + '/' + img" [alt]="img" />
     <figcaption>{{ img }}</figcaption>
   </figure>
 </div>
