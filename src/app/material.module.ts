@@ -4,8 +4,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
-const MODULES = [MatSidenavModule, MatListModule, MatSelectModule, MatRadioModule];
+const MODULES = [
+  MatSidenavModule,
+  MatListModule,
+  MatSelectModule,
+  MatRadioModule,
+  MatToolbarModule,
+];
 
 @NgModule({
   declarations: [],
