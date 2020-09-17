@@ -1,17 +1,17 @@
 .header {
   &__title {
     margin: 0;
-    padding: 0.5rem 0;
+    padding: 1rem;
   }
 }
 
 mat-drawer-container {
-  min-height: calc(100vh - 3rem);
+  min-height: calc(100vh - 4rem);
   background-color: transparent;
 }
 
 mat-drawer-content {
-  padding: 0 1.5rem;
+  padding: 1.3rem 1.5rem;
 }
 
 mat-drawer {

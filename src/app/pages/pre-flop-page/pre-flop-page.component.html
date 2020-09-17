@@ -1,0 +1,5 @@
+<mat-radio-group class="positions" [(ngModel)]="selectedPosition">
+  <mat-radio-button class="positions__item" *ngFor="let position of positions" [value]="position">
+    {{ position }}
+  </mat-radio-button>
+</mat-radio-group>

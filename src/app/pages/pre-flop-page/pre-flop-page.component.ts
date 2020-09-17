@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { positions } from '../../shared/shared';
+import { positions, ranges } from '../../shared/shared';
 import { Position } from '../../types/types';
 
 @Component({
@@ -10,6 +10,9 @@ import { Position } from '../../types/types';
 })
 export class PreFlopPageComponent implements OnInit {
   positions = positions;
+  ranges = ranges;
+
+  selectedPosition = positions[0];
 
   constructor() {}
 
