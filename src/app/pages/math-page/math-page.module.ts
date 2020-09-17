@@ -4,8 +4,9 @@ import { MathPageComponent } from './math-page.component';
 import { SharedModule } from '../../shared/shared.module';
 import { PotOddsComponent } from './pot-odds/pot-odds.component';
 import { EvComponent } from './ev/ev.component';
+import { BluffValueFreqComponent } from './bluff-value-freq/bluff-value-freq.component';
 
-const DECLARATIONS = [MathPageComponent, PotOddsComponent, EvComponent];
+const DECLARATIONS = [MathPageComponent, PotOddsComponent, EvComponent, BluffValueFreqComponent];
 
 @NgModule({
   declarations: [...DECLARATIONS],
