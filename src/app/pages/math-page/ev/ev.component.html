@@ -1,16 +1,20 @@
 <div>
   <mat-form-field class="form-input">
-    <mat-label>Bet</mat-label>
-    <input matInput type="number" [(ngModel)]="bet" />
+    <mat-label>Equity, %</mat-label>
+    <input matInput type="number" [(ngModel)]="equity" />
   </mat-form-field>
   <mat-form-field class="form-input">
     <mat-label>Current Pot</mat-label>
     <input matInput type="number" [(ngModel)]="pot" />
   </mat-form-field>
+  <mat-form-field class="form-input">
+    <mat-label>Bet</mat-label>
+    <input matInput type="number" [(ngModel)]="bet" />
+  </mat-form-field>
 </div>
 <div>
   <mat-form-field class="form-input">
     <mat-label>Result</mat-label>
-    <input matInput type="text" [ngModel]="result | percent" readonly />
+    <input matInput type="number" [ngModel]="result | number" readonly />
   </mat-form-field>
 </div>
