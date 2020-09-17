@@ -1,0 +1,24 @@
+:host {
+  display: block;
+}
+
+img {
+  height: auto;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pot-odds {
+  &__formulas {
+    margin-bottom: 1rem;
+    width: 475px;
+  }
+
+  &__table {
+    width: 620px;
+  }
+
+  &__chart {
+    width: 620px;
+  }
+}
