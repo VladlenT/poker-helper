@@ -5,11 +5,20 @@
   }
 }
 
-mat-sidenav-container {
-  background-color: transparent;
+mat-drawer-container {
   min-height: calc(100vh - 3rem);
+  background-color: transparent;
 }
 
-mat-sidenav {
+mat-drawer-content {
+  padding: 0 1.5rem;
+}
+
+mat-drawer {
   width: 15rem;
+}
+
+.link-active {
+  background: rgba(63, 81, 181, 0.15);
+  color: #3f51b5;
 }

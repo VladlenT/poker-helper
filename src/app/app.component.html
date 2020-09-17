@@ -2,10 +2,21 @@
   <h1 class="header__title">Poker Helper</h1>
 </header>
 
-<mat-sidenav-container>
-  <mat-sidenav> </mat-sidenav>
+<mat-drawer-container>
+  <mat-drawer mode="side" opened>
+    <mat-nav-list>
+      <a
+        *ngFor="let page of pages"
+        [routerLink]="page.path"
+        mat-list-item
+        routerLinkActive="link-active"
+      >
+        {{ page.data.title }}
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
 
-  <mat-sidenav-content>
+  <mat-drawer-content>
     <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </mat-drawer-content>
+</mat-drawer-container>
