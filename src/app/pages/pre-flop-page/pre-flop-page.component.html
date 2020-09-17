@@ -3,3 +3,10 @@
     {{ position }}
   </mat-radio-button>
 </mat-radio-group>
+
+<div class="ranges">
+  <figure *ngFor="let img of ranges[selectedPosition]">
+    <img [src]="IMG_PATH + selectedPosition + '/' + img" alt="" />
+    <figcaption>{{ img }}</figcaption>
+  </figure>
+</div>

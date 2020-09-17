@@ -1,6 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { positions, ranges } from '../../shared/shared';
-import { Position } from '../../types/types';
 
 @Component({
   selector: 'app-pre-flop-page',
@@ -11,8 +10,9 @@ import { Position } from '../../types/types';
 export class PreFlopPageComponent implements OnInit {
   positions = positions;
   ranges = ranges;
-
   selectedPosition = positions[0];
+
+  IMG_PATH = '/assets/img/ranges/';
 
   constructor() {}
 

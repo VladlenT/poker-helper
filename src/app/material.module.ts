@@ -6,6 +6,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 const MODULES = [
   MatSidenavModule,
@@ -14,6 +15,7 @@ const MODULES = [
   MatRadioModule,
   MatToolbarModule,
   MatButtonModule,
+  MatGridListModule,
 ];
 
 @NgModule({

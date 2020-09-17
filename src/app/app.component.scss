@@ -11,12 +11,14 @@
 }
 
 mat-drawer-container {
+  display: flex;
   min-height: calc(100vh - 4.5rem);
   background-color: transparent;
 }
 
 mat-drawer-content {
   padding: 1.3rem 1.5rem;
+  height: auto;
 }
 
 mat-drawer {

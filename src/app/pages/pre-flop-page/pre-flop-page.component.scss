@@ -3,10 +3,26 @@
 }
 
 .positions {
-  margin-bottom: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
 
   &__item {
     margin-right: 1rem;
     font-size: 1rem;
   }
+}
+
+.ranges {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 600px));
+  grid-auto-rows: minmax(auto, 600px);
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
 }
