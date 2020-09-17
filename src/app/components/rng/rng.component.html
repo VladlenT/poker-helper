@@ -1,7 +1,7 @@
 <button mat-raised-button color="accent" (click)="generate()">
-  <span *ngIf="randomNumber; else initBtn"
-    >Random - <span class="value">({{ randomNumber }})</span></span
-  >
+  <span *ngIf="randomNumber; else initBtn">
+    Random - <span class="value">({{ randomNumber }})</span>
+  </span>
 </button>
 
 <ng-template #initBtn>

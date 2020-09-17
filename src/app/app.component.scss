@@ -17,8 +17,9 @@ mat-drawer-container {
 }
 
 mat-drawer-content {
-  padding: 1.3rem 1.5rem;
-  height: auto;
+  overflow: auto;
+  padding: 1.3rem 1.5rem 0;
+  height: calc(100vh - 5.8rem);
 }
 
 mat-drawer {
