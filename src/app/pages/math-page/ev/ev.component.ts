@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ev',
@@ -7,9 +7,14 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EvComponent {
-  equity = 0;
-  pot = 0;
-  bet = 0;
+  @Input() showInputs = false;
+  @Input() equity = 0;
+  @Input() pot = 0;
+  @Input() bet = 0;
+
+  @Output() betChange = new EventEmitter<number>();
+  @Output() potChange = new EventEmitter<number>();
+  @Output() equityChange = new EventEmitter<number>();
 
   get result() {
     const equity = this.equity / 100;

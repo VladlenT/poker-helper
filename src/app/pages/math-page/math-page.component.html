@@ -1,18 +1,34 @@
+<div>
+  <h2 class="mat-h2">Inputs</h2>
+  <mat-form-field class="form-input">
+    <mat-label>Current Pot</mat-label>
+    <input matInput type="number" [(ngModel)]="pot" />
+  </mat-form-field>
+  <mat-form-field class="form-input">
+    <mat-label>Bet</mat-label>
+    <input matInput type="number" [(ngModel)]="bet" />
+  </mat-form-field>
+  <mat-form-field class="form-input">
+    <mat-label>Equity, %</mat-label>
+    <input matInput type="number" [(ngModel)]="equity" />
+  </mat-form-field>
+</div>
+
 <div class="d-flex">
   <div class="item">
     <h2 class="mat-h2">Pod Odds</h2>
-    <app-pot-odds></app-pot-odds>
+    <app-pot-odds [bet]="bet" [pot]="pot"></app-pot-odds>
   </div>
   <div class="item">
     <h2 class="mat-h2">Expected Value</h2>
-    <app-ev></app-ev>
+    <app-ev [bet]="bet" [pot]="pot" [equity]="equity"></app-ev>
   </div>
   <div class="item">
     <h2 class="mat-h2">Bluff and Value Freq</h2>
-    <app-bluff-value-freq></app-bluff-value-freq>
+    <app-bluff-value-freq [bet]="bet" [pot]="pot"></app-bluff-value-freq>
   </div>
   <div class="item">
-    <h2 class="mat-h2">Minimum Defence Frequency</h2>
-    <app-mdf></app-mdf>
+    <h2 class="mat-h2">Minimum Defence Frequency and Alpha</h2>
+    <app-mdf [bet]="bet" [pot]="pot"></app-mdf>
   </div>
 </div>

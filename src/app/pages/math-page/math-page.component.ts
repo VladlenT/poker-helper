@@ -4,13 +4,14 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   selector: 'app-math-page',
   templateUrl: './math-page.component.html',
   styleUrls: ['./math-page.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MathPageComponent implements OnInit {
+  bet = 0;
+  pot = 0;
+  equity = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

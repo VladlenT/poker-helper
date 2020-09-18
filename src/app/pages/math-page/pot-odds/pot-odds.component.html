@@ -1,11 +1,11 @@
-<div>
-  <mat-form-field class="form-input">
-    <mat-label>Bet</mat-label>
-    <input matInput type="number" [(ngModel)]="bet" />
-  </mat-form-field>
+<div *ngIf="showInputs">
   <mat-form-field class="form-input">
     <mat-label>Current Pot</mat-label>
-    <input matInput type="number" [(ngModel)]="pot" />
+    <input matInput type="number" [(ngModel)]="pot" (ngModelChange)="potChange.emit($event)" />
+  </mat-form-field>
+  <mat-form-field class="form-input">
+    <mat-label>Bet</mat-label>
+    <input matInput type="number" [(ngModel)]="bet" (ngModelChange)="betChange.emit($event)" />
   </mat-form-field>
 </div>
 <div>

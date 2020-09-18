@@ -1,4 +1,11 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 
 @Component({
   selector: 'app-mdf',
@@ -7,11 +14,19 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MdfComponent implements OnInit {
-  bet = 0;
-  pot = 0;
+  @Input() showInputs = false;
+  @Input() bet = 0;
+  @Input() pot = 0;
 
-  get result() {
+  @Output() betChange = new EventEmitter<number>();
+  @Output() potChange = new EventEmitter<number>();
+
+  get mdf() {
     return this.pot / (this.bet + this.pot) || 0;
+  }
+
+  get alpha() {
+    return this.bet / (this.bet + this.pot) || 0;
   }
 
   constructor() {}

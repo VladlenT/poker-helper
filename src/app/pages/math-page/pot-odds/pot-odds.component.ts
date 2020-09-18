@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { formatPercent } from '@angular/common';
 import { getRatioFromPercent } from '../../../shared/shared';
 
@@ -9,8 +9,12 @@ import { getRatioFromPercent } from '../../../shared/shared';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PotOddsComponent {
-  bet = 0;
-  pot = 0;
+  @Input() showInputs = false;
+  @Input() pot = 0;
+  @Input() bet = 0;
+
+  @Output() betChange = new EventEmitter<number>();
+  @Output() potChange = new EventEmitter<number>();
 
   get result() {
     const percent = this.bet / (this.bet + this.pot) || 0;

@@ -1,4 +1,11 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { formatNumber, formatPercent } from '@angular/common';
 import { getRatioFromPercent } from '../../../shared/shared';
 
@@ -9,8 +16,12 @@ import { getRatioFromPercent } from '../../../shared/shared';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BluffValueFreqComponent implements OnInit {
-  pot = 0;
-  bet = 0;
+  @Input() showInputs = false;
+  @Input() pot = 0;
+  @Input() bet = 0;
+
+  @Output() betChange = new EventEmitter<number>();
+  @Output() potChange = new EventEmitter<number>();
 
   get bluff() {
     return this.bet / (2 * this.bet + this.pot) || 0;
