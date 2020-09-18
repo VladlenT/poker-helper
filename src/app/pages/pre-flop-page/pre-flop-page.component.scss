@@ -17,8 +17,8 @@
 
 .ranges {
   display: grid;
-  grid-template-columns: repeat(3, minmax(auto, 600px));
-  grid-auto-rows: minmax(auto, 600px);
+  grid-template-columns: repeat(3, minmax(auto, 500px));
+  grid-auto-rows: minmax(auto, 500px);
 }
 
 img {
