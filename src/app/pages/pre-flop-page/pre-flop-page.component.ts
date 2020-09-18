@@ -12,7 +12,7 @@ export class PreFlopPageComponent implements OnInit {
   ranges = ranges;
   selectedPosition = positions[0];
 
-  IMG_PATH = '/assets/img/ranges/';
+  IMG_PATH = 'assets/img/ranges/';
 
   constructor() {}
 
