@@ -6,7 +6,7 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
-import { formatNumber, formatPercent } from '@angular/common';
+import { formatPercent } from '@angular/common';
 import { getRatioFromPercent } from '../../../shared/shared';
 
 @Component({

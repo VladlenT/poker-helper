@@ -3,8 +3,11 @@
 }
 
 .positions {
+  position: sticky;
+  top: 0;
   display: block;
-  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  background-color: #fff;
 
   &__item {
     margin-right: 1rem;
