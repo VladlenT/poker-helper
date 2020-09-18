@@ -1,4 +1,5 @@
 import { Position } from '../types/types';
+import { formatNumber } from '@angular/common';
 
 export const positions: Position[] = ['UTG', 'MP', 'CO', 'BN', 'SB', 'BB'];
 
@@ -69,3 +70,5 @@ export const ranges: Record<Position, string[]> = {
     'UTG_vs_BB-3Bet.png',
   ],
 };
+
+export const getRatioFromPercent = (percent: number) => `${formatNumber(1 / percent, 'en')}:1`;

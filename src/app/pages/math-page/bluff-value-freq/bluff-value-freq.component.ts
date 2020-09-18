@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { formatNumber, formatPercent } from '@angular/common';
+import { getRatioFromPercent } from '../../../shared/shared';
 
 @Component({
   selector: 'app-bluff-value-freq',
@@ -22,8 +23,8 @@ export class BluffValueFreqComponent implements OnInit {
   get bluffToValueRatio() {
     const percent = this.bet / (this.bet + this.pot) || 0;
     const formattedPercent = formatPercent(percent, 'en');
-    const ratio = `${formatNumber(1 / percent, 'en')}:1`;
-    return `${formattedPercent} or ${ratio}`;
+
+    return `${formattedPercent} or ${getRatioFromPercent(percent)}`;
   }
 
   constructor() {}

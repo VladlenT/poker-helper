@@ -1,4 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { formatPercent } from '@angular/common';
+import { getRatioFromPercent } from '../../../shared/shared';
 
 @Component({
   selector: 'app-pot-odds',
@@ -11,7 +13,9 @@ export class PotOddsComponent {
   pot = 0;
 
   get result() {
-    return this.bet / (this.bet + this.pot);
+    const percent = this.bet / (this.bet + this.pot) || 0;
+    const formattedPercent = formatPercent(percent, 'en');
+    return `${formattedPercent} or ${getRatioFromPercent(percent)}`;
   }
 
   constructor() {}

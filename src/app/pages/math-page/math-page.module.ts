@@ -5,11 +5,12 @@ import { SharedModule } from '../../shared/shared.module';
 import { PotOddsComponent } from './pot-odds/pot-odds.component';
 import { EvComponent } from './ev/ev.component';
 import { BluffValueFreqComponent } from './bluff-value-freq/bluff-value-freq.component';
+import { MdfComponent } from './mdf/mdf.component';
 
 const DECLARATIONS = [MathPageComponent, PotOddsComponent, EvComponent, BluffValueFreqComponent];
 
 @NgModule({
-  declarations: [...DECLARATIONS],
+  declarations: [...DECLARATIONS, MdfComponent],
   imports: [CommonModule, SharedModule],
   exports: [...DECLARATIONS],
 })

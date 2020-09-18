@@ -14,12 +14,12 @@
 </div>
 <div>
   <mat-form-field class="form-input">
-    <mat-label>Result</mat-label>
+    <mat-label>EV</mat-label>
     <input matInput type="number" [ngModel]="result | number" readonly />
   </mat-form-field>
 
   <mat-form-field class="form-input">
-    <mat-label>Result as Pot %</mat-label>
+    <mat-label>EV as Pot %</mat-label>
     <input matInput type="text" [ngModel]="result / (pot + bet) || 0 | percent" readonly />
   </mat-form-field>
 </div>
