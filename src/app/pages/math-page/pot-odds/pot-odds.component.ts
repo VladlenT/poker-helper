@@ -17,7 +17,7 @@ export class PotOddsComponent {
   @Output() potChange = new EventEmitter<number>();
 
   get result() {
-    const percent = this.bet / (this.bet + this.pot) || 0;
+    const percent = this.bet / (2 * this.bet + this.pot) || 0;
     const formattedPercent = formatPercent(percent, 'en');
     return `${formattedPercent} or ${getRatioFromPercent(percent)}`;
   }
