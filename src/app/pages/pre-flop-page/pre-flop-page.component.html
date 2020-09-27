@@ -1,12 +1,17 @@
-<mat-radio-group class="positions" [(ngModel)]="selectedPosition">
+<mat-radio-group class="positions" [(ngModel)]="selectedPosition" (ngModelChange)="scrollToTop()">
   <mat-radio-button class="positions__item" *ngFor="let position of positions" [value]="position">
     {{ position }}
   </mat-radio-button>
 </mat-radio-group>
 
-<div class="ranges">
-  <figure *ngFor="let img of ranges[selectedPosition]">
-    <img [src]="IMG_PATH + selectedPosition + '/' + img" [alt]="img" />
-    <figcaption>{{ img }}</figcaption>
-  </figure>
+<div class="d-flex">
+  <div class="ranges mr-4">
+    <figure *ngFor="let img of ranges[selectedPosition]">
+      <img [src]="IMG_PATH + selectedPosition + '/' + img" [alt]="img" />
+      <figcaption>{{ img }}</figcaption>
+    </figure>
+  </div>
+  <div>
+    <app-math-page [vertical]="true"></app-math-page>
+  </div>
 </div>

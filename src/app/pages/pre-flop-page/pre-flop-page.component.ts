@@ -12,9 +12,14 @@ export class PreFlopPageComponent implements OnInit {
   ranges = ranges;
   selectedPosition = positions[0];
 
+  hostEl = document.querySelector('mat-drawer-content');
   IMG_PATH = 'assets/img/ranges/';
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  scrollToTop() {
+    this.hostEl.scrollTop = 0;
+  }
 }
