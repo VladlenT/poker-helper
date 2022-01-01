@@ -1,14 +1,9 @@
 :host {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 300px;
 }
 
 .positions {
-  position: sticky;
-  top: 0;
-  display: block;
-  padding-bottom: 0.5rem;
-  background-color: #fff;
-
   &__item {
     margin-right: 1rem;
     font-size: 1rem;
@@ -21,12 +16,16 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding-bottom: 0.5rem;
+    background-color: #fff;
   }
 
   &__main {
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: repeat(3, minmax(auto, 500px));
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1rem;
   }
 }

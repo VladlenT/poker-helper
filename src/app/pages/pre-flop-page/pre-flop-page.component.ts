@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { positions, ranges } from '../../shared/shared';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-pre-flop-page',
@@ -10,22 +11,38 @@ import { positions, ranges } from '../../shared/shared';
 export class PreFlopPageComponent implements OnInit {
   positions = positions;
   ranges = ranges;
-  heroPosition = positions[0];
-  villainPosition = positions[1];
+  heroPosition = new FormControl(positions[0]);
+  villainPosition = new FormControl(positions[1]);
 
   headerData = [
-    { playerTitle: 'Hero', position: this.heroPosition },
-    { playerTitle: 'Villain', position: this.villainPosition },
+    { playerTitle: 'Hero', control: this.heroPosition },
+    { playerTitle: 'Villain', control: this.villainPosition },
   ];
 
   hostEl = document.querySelector('mat-drawer-content');
-  IMG_PATH = 'assets/img/ranges/';
+  IMG_PATH = '/assets/img/ranges';
+
+  get images() {
+    const hp = this.heroPosition.value;
+    return this.ranges[hp]
+      .filter((range: string) => range.includes(this.villainPosition.value))
+      .map((range) => ({
+        src: `${this.IMG_PATH}/${hp}/${range}`,
+        label: range,
+      }));
+  }
 
   constructor() {}
 
   ngOnInit(): void {}
 
+  onPositionChange(): void {
+    this.scrollToTop();
+  }
+
   scrollToTop(): void {
     this.hostEl.scrollTop = 0;
   }
+
+  trackBySrc = (_, img) => img.src;
 }

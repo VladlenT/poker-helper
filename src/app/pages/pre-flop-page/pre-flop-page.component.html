@@ -4,8 +4,8 @@
       <h2>{{ data.playerTitle }} position</h2>
       <mat-radio-group
         class="positions"
-        [(ngModel)]="data.position"
-        (ngModelChange)="scrollToTop()"
+        [formControl]="data.control"
+        (ngModelChange)="onPositionChange()"
       >
         <mat-radio-button
           class="positions__item"
@@ -19,9 +19,9 @@
   </header>
 
   <div class="ranges__main">
-    <figure *ngFor="let img of ranges[heroPosition]">
-      <img [src]="IMG_PATH + heroPosition + '/' + img" [alt]="img" />
-      <figcaption>{{ img }}</figcaption>
+    <figure *ngFor="let img of images; trackBy: trackBySrc">
+      <img [src]="img.src" [alt]="img.label" />
+      <figcaption>{{ img.label }}</figcaption>
     </figure>
   </div>
 </section>
