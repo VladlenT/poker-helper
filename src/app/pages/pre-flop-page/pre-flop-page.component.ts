@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { positions, ranges } from '../../shared/shared';
 
 @Component({
@@ -19,7 +19,7 @@ export class PreFlopPageComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  scrollToTop() {
+  scrollToTop(): void {
     this.hostEl.scrollTop = 0;
   }
 }
