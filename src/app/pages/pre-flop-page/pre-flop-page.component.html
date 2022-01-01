@@ -1,6 +1,6 @@
 <section class="ranges">
   <header class="ranges__header">
-    <div *ngFor="let data of headerData">
+    <div class="mr-5" *ngFor="let data of headerData">
       <h2>{{ data.playerTitle }} position</h2>
       <mat-radio-group
         class="positions"
@@ -26,6 +26,6 @@
   </div>
 </section>
 
-<section>
+<section class="math">
   <app-math-page [vertical]="true"></app-math-page>
 </section>
