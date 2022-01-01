@@ -10,7 +10,13 @@ import { positions, ranges } from '../../shared/shared';
 export class PreFlopPageComponent implements OnInit {
   positions = positions;
   ranges = ranges;
-  selectedPosition = positions[0];
+  heroPosition = positions[0];
+  villainPosition = positions[1];
+
+  headerData = [
+    { playerTitle: 'Hero', position: this.heroPosition },
+    { playerTitle: 'Villain', position: this.villainPosition },
+  ];
 
   hostEl = document.querySelector('mat-drawer-content');
   IMG_PATH = 'assets/img/ranges/';
