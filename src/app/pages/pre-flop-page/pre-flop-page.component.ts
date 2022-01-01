@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { positions, ranges } from '../../shared/shared';
 import { FormControl } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-pre-flop-page',
@@ -19,8 +20,9 @@ export class PreFlopPageComponent implements OnInit {
     { playerTitle: 'Villain', control: this.villainPosition },
   ];
 
+  IMG_PATH = environment.imgPath + '/ranges';
+
   hostEl = document.querySelector('mat-drawer-content');
-  IMG_PATH = '/assets/img/ranges';
 
   get images() {
     const hp = this.heroPosition.value;
