@@ -27,7 +27,11 @@ export class PreFlopPageComponent implements OnInit {
   get images() {
     const hp = this.heroPosition.value;
     return this.ranges[hp]
-      .filter((range: string) => range.includes(this.villainPosition.value))
+      .filter(
+        (range: string) =>
+          range.includes(this.villainPosition.value) ||
+          range.includes(`${hp}_RFI`)
+      )
       .map((range) => ({
         src: `${this.IMG_PATH}/${hp}/${range}`,
         label: range,
