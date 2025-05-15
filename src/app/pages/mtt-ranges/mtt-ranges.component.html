@@ -28,4 +28,15 @@
       </mat-select>
     </mat-form-field>
   </header>
+
+  <div class="ranges">
+    <figure *ngFor="let img of images; trackBy: trackBySrc">
+      <img [src]="img.src" [alt]="img.label" />
+      <figcaption>{{ img.label }}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="math">
+  <app-math-page [vertical]="true"></app-math-page>
 </section>
