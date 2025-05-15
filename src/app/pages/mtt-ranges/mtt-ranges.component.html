@@ -1,0 +1,31 @@
+<section>
+  <header class="d-flex align-items-center">
+    <div class="positions mr-4">
+      <div class="positions__item mr-5" *ngFor="let data of headerData">
+        <h2>{{ data.playerTitle }} position</h2>
+        <mat-radio-group
+          class="positions"
+          [formControl]="data.control"
+          (ngModelChange)="onPositionChange()"
+        >
+          <mat-radio-button
+            class="positions__item"
+            *ngFor="let position of positions"
+            [value]="position"
+          >
+            {{ position }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Bet Size</mat-label>
+      <mat-select [(ngModel)]="selectedBetSize">
+        <mat-option *ngFor="let size of betSizes" [value]="size">
+          {{ size }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </header>
+</section>
