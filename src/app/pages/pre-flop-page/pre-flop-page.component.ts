@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { positions, ranges } from '../../shared/shared';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -12,8 +12,8 @@ import { environment } from '../../../environments/environment';
 export class PreFlopPageComponent implements OnInit {
   positions = positions;
   ranges = ranges;
-  heroPosition = new FormControl(positions[0]);
-  villainPosition = new FormControl(positions[1]);
+  heroPosition = new UntypedFormControl(positions[0]);
+  villainPosition = new UntypedFormControl(positions[1]);
 
   headerData = [
     { playerTitle: 'Hero', control: this.heroPosition },

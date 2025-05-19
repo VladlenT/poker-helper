@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { positions, } from 'src/app/shared/shared';
 import { Position } from 'src/app/types/types';
 import { environment } from 'src/environments/environment';
@@ -15,8 +15,8 @@ export class MttRangesComponent implements OnInit {
   selectedBetSize = this.betSizes[0]
 
   positions = positions;
-  heroPosition = new FormControl(positions[0]);
-  villainPosition = new FormControl(positions[1]);
+  heroPosition = new UntypedFormControl(positions[0]);
+  villainPosition = new UntypedFormControl(positions[1]);
 
   headerData = [
     { playerTitle: 'Hero', control: this.heroPosition },
