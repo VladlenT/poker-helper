@@ -41,7 +41,8 @@ export class MttRangesComponent implements OnInit {
         (range: string) =>
           range.includes(this.selectedBetSize) &&
           (
-            new RegExp(this.getExpr(vp)).test(range) ||
+            (new RegExp(this.getExpr(vp)).test(range) &&
+              new RegExp(this.getExpr(hp)).test(range)) ||
             new RegExp(`RFI/${this.getExpr(hp)}`).test(range)
           )
       )
